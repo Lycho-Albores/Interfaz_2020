@@ -31,6 +31,7 @@ public class Inicio extends Application {
         stage.setScene(scene);
         stage.show();
       
+        system.out.println("Hola lycho :3");
 
     }
 
