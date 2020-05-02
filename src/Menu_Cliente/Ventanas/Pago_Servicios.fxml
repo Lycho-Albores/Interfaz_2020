@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Menu_Cliente.Ventanas.Pago_ServiciosController">
+   <children>
+      <ImageView fx:id="logo_bank" fitHeight="98.0" fitWidth="158.0" layoutX="10.0" layoutY="24.0" onMouseClicked="#BackToInicio" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../appbank_test/imgs/logoBk.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="219.0" layoutY="48.0" text="Pago de Servicios">
+         <font>
+            <Font name="Constantia Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="198.0" layoutY="81.0" text="¿Que pago de servicios desea realizar?" />
+      <JFXComboBox fx:id="combo_servicios" layoutX="234.0" layoutY="107.0" prefHeight="25.0" prefWidth="133.0" promptText="Servicios" />
+      <JFXTextField fx:id="txt_montoApagar" alignment="TOP_CENTER" layoutX="233.0" layoutY="166.0" promptText="monto a pagar" text="\$0.00°° MXN" />
+      <JFXButton fx:id="btn_ConfirmarPago" layoutX="239.0" layoutY="246.0" onAction="#confirmarPago" prefHeight="29.0" prefWidth="135.0" style="-fx-background-color: #343434;" text="Confirmar Pago" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView glyphName="CREDIT_CARD" size="20" style="-fx-fill: WHITE;" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

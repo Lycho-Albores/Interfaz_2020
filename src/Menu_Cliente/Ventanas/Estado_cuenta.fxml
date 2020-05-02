@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="600.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu_Cliente.Ventanas.Estado_cuentaController">
+   <children>
+      <ImageView fx:id="logo_bank" fitHeight="98.0" fitWidth="158.0" layoutY="14.0" onMouseClicked="#BackToInicio" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../appbank_test/imgs/logoBk.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="238.0" layoutY="32.0" text="Estado de Cuenta">
+         <font>
+            <Font name="Constantia Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="140.0" text="&quot;User&quot;" />
+      <FontAwesomeIconView glyphName="USER" layoutX="290.0" layoutY="126.0" size="65" />
+      <TableView layoutX="118.0" layoutY="207.0" prefHeight="200.0" prefWidth="411.0">
+        <columns>
+          <TableColumn prefWidth="138.0" text="Fecha" />
+          <TableColumn prefWidth="154.0" text="Movimiento" />
+            <TableColumn prefWidth="117.0" text="Monto" />
+        </columns>
+      </TableView>
+      <Label layoutX="268.0" layoutY="149.0" text="\$0.00">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_Actualizar" layoutX="35.0" layoutY="142.0" onAction="#Actualizar_EstadoCuenta" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #343434;" text="Actualizar" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView glyphName="" size="20.0" style="-fx-fill: #ffffff;" text="" />
+         </graphic>
+      </JFXButton>
+   </children>
+</Pane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="352.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Crear_Cuenta.Nueva_CuentaController">
+   <children>
+      <ImageView fx:id="logo2" fitHeight="134.0" fitWidth="204.0" layoutX="74.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../appbank_test/imgs/logoBk.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btn_confirmar" layoutX="98.0" layoutY="544.0" onAction="#confirmacion_de_cuenta" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: #343434;" text="Confirmar" textFill="WHITE">
+         <font>
+            <Font name="Constantia" size="13.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="34.0" layoutY="129.0" prefHeight="309.0" prefWidth="284.0" spacing="25.0">
+         <children>
+            <JFXTextField fx:id="txt_nombreCompleto" promptText="Nombre Completo">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txt_curp" promptText="Curp">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txt_Estado" promptText="Estado">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtMunicipio" promptText="Municipio">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txt_CP" promptText="Código Postal">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txt_correo" layoutX="55.0" layoutY="230.0" promptText="Correo electrónico">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txt_contra" layoutX="55.0" layoutY="280.0" promptText="Contraseña">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txt_contra_confirm" layoutX="55.0" layoutY="330.0" promptText="Confirmar Contraseña">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="45.0" right="45.0" top="20.0" />
+         </padding>
+      </VBox>
+      <JFXButton fx:id="btn_regresar" layoutX="98.0" layoutY="581.0" onAction="#BackToLogin" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: #343434;" text="Regresar " textFill="WHITE">
+         <font>
+            <Font name="Constantia" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

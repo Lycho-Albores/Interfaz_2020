@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor_login" prefHeight="471.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.Login_Controller">
+   <children>
+      <Pane fx:id="pane_login" prefHeight="471.0" prefWidth="336.0" style="-fx-background-color: #ffff;">
+         <children>
+            <JFXTextField fx:id="txt_account" layoutX="74.0" layoutY="165.0" prefHeight="25.0" prefWidth="191.0" promptText="Account / Cuenta" unFocusColor="#8d8989">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="txt_password" layoutX="74.0" layoutY="238.0" prefHeight="25.0" prefWidth="191.0" promptText="Password / Contraseña">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></JFXPasswordField>
+            <JFXButton fx:id="btn_login" layoutX="74.0" layoutY="309.0" onAction="#goToMenuCliente" prefHeight="25.0" prefWidth="191.0" style="-fx-background-color: #343434;" text="INGRESAR" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="13.0" />
+               </font></JFXButton>
+            <Label layoutX="122.0" layoutY="165.0" prefHeight="36.0" prefWidth="72.0" textAlignment="CENTER" />
+            <ImageView fx:id="logo_bank" fitHeight="114.0" fitWidth="180.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#BackToInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../appbank_test/imgs/logoBk.jpg" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView glyphName="LOCK" layoutX="57.0" layoutY="257.0" size="15" wrappingWidth="7.714285850524902" />
+            <FontAwesomeIconView glyphName="USER" layoutX="51.0" layoutY="182.0" />
+            <Label layoutX="51.0" layoutY="354.0" text="No tienes cuenta? Crea una!!!" />
+            <JFXButton fx:id="btn_newAccount" layoutX="74.0" layoutY="385.0" onAction="#goToNewAccount" prefHeight="25.0" prefWidth="191.0" style="-fx-background-color: #343434;" text="Crear Nueva Cuenta" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

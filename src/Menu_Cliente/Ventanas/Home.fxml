@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: WHITE;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Menu_Cliente.Ventanas.HomeController">
+   <children>
+      <Label layoutX="235.0" layoutY="51.0" text="¡¡Bienvenido" />
+      <Label layoutX="304.0" layoutY="46.0" text="User!!">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="USER" layoutX="265.0" layoutY="184.0" size="90" />
+      <ImageView fx:id="logo_bank" fitHeight="98.0" fitWidth="158.0" layoutX="14.0" layoutY="20.0" onMouseClicked="#BackToInicio" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../appbank_test/imgs/logoBk.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="202.0" layoutY="200.0" text="¡Gracias por volver!">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="227.0" layoutY="235.0" text="Disfruta de nuestros servicios" />
+   </children>
+</AnchorPane>
