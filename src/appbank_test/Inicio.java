@@ -33,7 +33,8 @@ public class Inicio extends Application {
         stage.show();
       
         //Isaias Grajales Velazquez
-
+       //Hola Isaias mi nombre es ulises arreola albores
+        
     }
 
     /**
