@@ -5,6 +5,7 @@
  */
 package appbank_test;
 
+import static java.time.Clock.system;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
@@ -31,7 +32,7 @@ public class Inicio extends Application {
         stage.setScene(scene);
         stage.show();
       
-        system.out.println("Hola lycho :3");
+        //Isaias Grajales Velazquez
 
     }
 
