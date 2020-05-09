@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Menu_Cliente;
 
 import com.jfoenix.controls.JFXButton;
@@ -28,11 +24,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author theso
- */
+
 public class MenuClienteController implements Initializable {
 
     @FXML
@@ -58,9 +50,7 @@ public class MenuClienteController implements Initializable {
     @FXML
     private ImageView logo_bank;
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package appbank_test;
 
 
@@ -30,10 +26,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Lycho
- */
+
 public class FXML_InicioController implements Initializable {
     
     @FXML
@@ -92,7 +85,7 @@ public class FXML_InicioController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO  
+        
         puntero();
         hand();
       

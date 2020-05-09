@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Login;
 
+import Menu_Cliente.MenuClienteController;
+import Menu_Cliente.Ventanas.Estado_cuentaController;
+import clases.Usuario;
+import cliente.ConsumoCliente;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXRippler;
 import com.jfoenix.controls.JFXTextField;
+import enums.EndPoint;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,6 +22,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -29,11 +31,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Lycho
- */
+
 public class Login_Controller implements Initializable {
 
     @FXML
@@ -50,19 +48,18 @@ public class Login_Controller implements Initializable {
     private ImageView logo_bank;
     @FXML
     private JFXButton btn_newAccount;
+    
+    ConsumoCliente consumo = new ConsumoCliente();
+    @FXML
+    private Label lblError;
+    
+    Estado_cuentaController controller = new Estado_cuentaController();
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         hand();
         rippler();
-              
-          
-        
-    }    
+    }
     
    public void hand(){
        txt_account.setCursor(Cursor.HAND);
@@ -70,9 +67,7 @@ public class Login_Controller implements Initializable {
        btn_login.setCursor(Cursor.HAND);
        logo_bank.setCursor(Cursor.HAND);
        btn_newAccount.setCursor(Cursor.HAND);
-       
    }
-  
 
     public void rippler() {
         JFXRippler rippler = new JFXRippler(pane_login);
@@ -81,24 +76,58 @@ public class Login_Controller implements Initializable {
         rippler.setRipplerRadius(60);
         rippler.setMaskType(JFXRippler.RipplerMask.RECT);
         anchor_login.getChildren().add(rippler);
-        
     }
  
     
     @FXML
     private void goToMenuCliente(ActionEvent event) throws IOException {
-        FXMLLoader ventana = new FXMLLoader(getClass().getResource("/Menu_Cliente/MenuCliente.fxml"));
-        Parent root = ventana.load();
-        Stage stege = new Stage();
-        Scene scene = new Scene(root);
-        stege.setScene(scene);
-        stege.setTitle("Menu Cliente | BN Tuchtlan"); // Titulo
-        stege.getIcons().add(new Image("appbank_test/imgs/icn.png")); // Logo en el programa
-        stege.show();            
-        Stage cerrar;
-        cerrar = (Stage)btn_login.getScene().getWindow();
-        cerrar.close();
         
+        boolean usuarioValido = false;
+        boolean contraseniaValido = false;
+        String _usuario = "";
+        String _contrasenia = "";
+        String usuario = txt_account.getText();
+        String contrasenia = new String(txt_password.getText());
+        
+        Object[][] usuarios = consumo.lista(EndPoint.USUARIOS);
+        
+        for(int i=0; i<usuarios.length; i++){
+            for(int j=0; j<usuarios[i].length; j++){
+                if(j==1){
+                    _usuario = String.valueOf(usuarios[i][j]);
+                }
+                if(j==2){
+                    _contrasenia = String.valueOf(usuarios[i][j]);
+                }
+            }
+            
+            if(usuario.equals(_usuario) && contrasenia.equals(_contrasenia)){
+                usuarioValido = true;
+                contraseniaValido = true;
+                controller.setText(usuario);
+            }
+        }
+        
+        if(usuarioValido == true && contraseniaValido==true){
+
+            FXMLLoader ventana = new FXMLLoader(getClass().getResource("/Menu_Cliente/MenuCliente.fxml"));
+            Parent root = ventana.load();
+            Stage stege = new Stage();
+            Scene scene = new Scene(root);
+            stege.setScene(scene);
+            stege.setTitle("Menu Cliente | BN Tuchtlan"); // Titulo
+            stege.getIcons().add(new Image("appbank_test/imgs/icn.png")); // Logo en el programa
+            stege.show();            
+            Stage cerrar;
+            cerrar = (Stage)btn_login.getScene().getWindow();
+            cerrar.close();
+            
+        }
+        else{
+            lblError.setText("Usuario o contraseña incorrectos");
+            txt_account.setText(null);
+            txt_password.setText(null);
+        }
     }
 
     @FXML
@@ -114,9 +143,7 @@ public class Login_Controller implements Initializable {
         
          Stage cerrar;
         cerrar = (Stage)logo_bank.getScene().getWindow();
-        cerrar.close();
-        
-        
+        cerrar.close(); 
     }
     
 @FXML
@@ -133,12 +160,5 @@ public class Login_Controller implements Initializable {
         cerrar = (Stage)btn_newAccount.getScene().getWindow();
         cerrar.close();
     }
-
    
-    
-   
-
-   
-  
-    
 }

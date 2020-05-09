@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="736.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="menu_empleado_ventanas.GraficaReporteFinancieroController">
+   <children>
+      <Label layoutX="319.0" layoutY="6.0" text="Reporte financiero" />
+      <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" text="Menu Reporte Financiero" />
+      <Button layoutX="339.0" layoutY="384.0" mnemonicParsing="false" text="Generar" />
+      <LineChart fx:id="Reporte" layoutX="13.0" layoutY="27.0" prefHeight="348.0" prefWidth="708.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

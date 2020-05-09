@@ -22,7 +22,7 @@
             <Font name="Constantia Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="299.0" layoutY="140.0" text="&quot;User&quot;" />
+      <Label fx:id="usuario" layoutX="299.0" layoutY="140.0" text="&quot;User&quot;" />
       <FontAwesomeIconView glyphName="USER" layoutX="290.0" layoutY="126.0" size="65" />
       <TableView layoutX="118.0" layoutY="207.0" prefHeight="200.0" prefWidth="411.0">
         <columns>

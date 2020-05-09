@@ -41,6 +41,11 @@
                   <Font name="Constantia" size="13.0" />
                </font>
             </JFXButton>
+            <Label fx:id="lblError" layoutX="70.0" layoutY="280.0" prefHeight="16.0" prefWidth="198.0">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

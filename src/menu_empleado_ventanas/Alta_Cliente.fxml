@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_empleado_ventanas.Alta_ClienteController">
+   <children>
+      <Label layoutX="128.0" layoutY="29.0" text="Id No:" />
+      <Label layoutX="111.0" layoutY="59.0" text="Nombre:" />
+      <Label layoutX="68.0" layoutY="92.0" text="Apellido paterno:" />
+      <Label layoutX="65.0" layoutY="125.0" text="Apellido materno:" />
+      <Label layoutX="475.0" layoutY="29.0" text="R.F.C.:" />
+      <Label layoutX="398.0" layoutY="59.0" text="Fecha de nacimiento:" />
+      <Label layoutX="454.0" layoutY="92.0" text="Domicilio:" />
+      <Label layoutX="455.0" layoutY="125.0" text="Telefono:" />
+      <Label layoutX="122.0" layoutY="158.0" text="E-mail:" />
+      <TextField fx:id="txtId" layoutX="177.0" layoutY="25.0" prefHeight="25.0" prefWidth="47.0" />
+      <TextField fx:id="txtNombre" layoutX="175.0" layoutY="56.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="txtApellidoPat" layoutX="177.0" layoutY="88.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="txtApellidoMat" layoutX="177.0" layoutY="121.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="txtRFC" layoutX="526.0" layoutY="25.0" prefHeight="25.0" prefWidth="165.0" />
+      <Label layoutX="313.0" layoutY="3.0" text="Cliente nuevo" />
+      <TextField fx:id="txtDomicilio" layoutX="526.0" layoutY="88.0" prefHeight="25.0" prefWidth="165.0" />
+      <TextField fx:id="txtTelefono" layoutX="526.0" layoutY="121.0" prefHeight="25.0" prefWidth="165.0" />
+      <TextField fx:id="txtEmail" layoutX="175.0" layoutY="154.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button layoutX="173.0" layoutY="394.0" mnemonicParsing="false" text="Insertar" />
+      <Label layoutX="62.0" layoutY="192.0" text="Numero de cliente:" />
+      <Label layoutX="415.0" layoutY="158.0" text="Ingreso mensual:" />
+      <TextField fx:id="txtIngresoMensual" layoutX="527.0" layoutY="154.0" prefHeight="25.0" prefWidth="165.0" />
+      <Label layoutX="415.0" layoutY="193.0" text="Tipo de persona:" />
+      <ComboBox fx:id="TipoPersona" layoutX="526.0" layoutY="189.0" prefHeight="25.0" prefWidth="165.0" />
+      <TextField fx:id="txtNumCliente" layoutX="177.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button layoutX="11.0" layoutY="394.0" mnemonicParsing="false" text="Menu de opciones" />
+      <TableView fx:id="TablaCliente" layoutX="9.0" layoutY="219.0" prefHeight="170.0" prefWidth="719.0" />
+      <Button layoutX="264.0" layoutY="394.0" mnemonicParsing="false" text="Actualizar" />
+      <Button layoutX="371.0" layoutY="394.0" mnemonicParsing="false" text="Eliminar" />
+      <DatePicker fx:id="FechaNac" layoutX="527.0" layoutY="56.0" prefHeight="25.0" prefWidth="165.0" />
+      <Label layoutX="299.0" layoutY="29.0" text="CURP:" />
+      <Button layoutX="599.0" layoutY="394.0" mnemonicParsing="false" text="Cuentas" />
+   </children>
+</AnchorPane>
