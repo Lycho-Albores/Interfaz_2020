@@ -1,4 +1,3 @@
-
 package appbank_test;
 
 import static java.time.Clock.system;
