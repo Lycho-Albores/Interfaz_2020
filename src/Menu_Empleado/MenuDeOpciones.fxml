@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu_Empleado.MenuDeOpcionesController">
+   <center>
+      <AnchorPane prefHeight="347.0" prefWidth="357.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="127.0" layoutY="25.0" text="Bienvenido:" />
+            <Label fx:id="lable_NombreUsuario" layoutX="200.0" layoutY="25.0" text="*Nombre de Usuario*" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="432.0" prefWidth="257.0" spacing="5.0" style="-fx-background-color: #dcdcdc;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="89.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../appbank_test/imgs/logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <JFXButton fx:id="btn_nvaCuenta" onAction="#toNvaCuenta" prefHeight="50.0" prefWidth="220.0" text="Nueva Cuenta">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btn_nvoCliente" onAction="#toNvoCliente" prefHeight="50.0" prefWidth="220.0" text="Nuevo Cliente">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btn_edoCuenta" onAction="#toEdoCuenta" prefHeight="50.0" prefWidth="220.0" text="Estado de Cuenta">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btn_consultas" onAction="#toConsultas" prefHeight="50.0" prefWidth="220.0" text="Consultas / Actualizaciones / Ajustes">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_financiero" onAction="#toReportFinanciero" prefHeight="50.0" prefWidth="220.0" text="Reporte Financiero">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btn_logOut" onAction="#backToLogin" prefHeight="37.0" prefWidth="220.0" style="-fx-background-color: FE6F61;" text="Log Out">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SIGN_OUT" opacity="0.56" rotate="180.0" size="15" />
+               </graphic></JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="20.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <Pane prefHeight="15.0" prefWidth="1280.0" style="-fx-background-color: #121212;" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Pane prefHeight="15.0" prefWidth="1280.0" style="-fx-background-color: #121212;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

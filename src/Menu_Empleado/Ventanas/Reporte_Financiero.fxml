@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_empleado_ventanas.Reporte_FinancieroController">
+   <children>
+      <TableView fx:id="TablaReporte" layoutX="65.0" layoutY="127.0" prefHeight="275.0" prefWidth="715.0" />
+      <Label layoutX="14.0" layoutY="28.0" text="Total periodo x al periodo x :">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblCantidad" layoutX="174.0" layoutY="28.0" text="\$ xxxxxxxxxxxxxxx">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <JFXDatePicker fx:id="periodo1" layoutX="43.0" layoutY="67.0" />
+      <JFXDatePicker fx:id="periodo2" layoutX="300.0" layoutY="68.0" />
+      <JFXButton fx:id="btn_consultar" layoutX="495.0" layoutY="68.0" onAction="#consultar1" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: dcdcdc;" text="Consultar" />
+      <JFXButton fx:id="btn_grafica" layoutX="670.0" layoutY="93.0" onAction="#goToGrafica" style="-fx-background-color: dcdcdc;" text="Gráfica Financiera" />
+   </children>
+</AnchorPane>

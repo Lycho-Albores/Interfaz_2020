@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor_login" prefHeight="471.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.Login_Controller">
+   <children>
+      <Pane fx:id="pane_login" layoutX="7.0" layoutY="-14.0" prefHeight="471.0" prefWidth="336.0" style="-fx-background-color: #ffff;">
+         <children>
+            <JFXTextField fx:id="txt_account" layoutX="85.0" layoutY="204.0" prefHeight="25.0" prefWidth="191.0" promptText="Account / Cuenta" unFocusColor="#8d8989">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="txt_password" layoutX="85.0" layoutY="277.0" prefHeight="25.0" prefWidth="191.0" promptText="Password / Contraseña">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font></JFXPasswordField>
+            <JFXButton fx:id="btn_login" layoutX="70.0" layoutY="413.0" onAction="#goToMenuCliente" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: #343434;" text="INGRESAR" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font></JFXButton>
+            <Label layoutX="87.0" layoutY="326.0" prefHeight="36.0" prefWidth="163.0" textAlignment="CENTER" />
+            <ImageView fx:id="logo_bank" fitHeight="114.0" fitWidth="180.0" layoutX="79.0" layoutY="56.0" onMouseClicked="#BackToInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../appbank_test/imgs/logoBk.jpg" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView glyphName="LOCK" layoutX="68.0" layoutY="296.0" size="15" wrappingWidth="7.714285850524902" />
+            <FontAwesomeIconView glyphName="USER" layoutX="62.0" layoutY="221.0" />
+            <Label fx:id="lblError" layoutX="70.0" layoutY="375.0" prefHeight="16.0" prefWidth="198.0">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

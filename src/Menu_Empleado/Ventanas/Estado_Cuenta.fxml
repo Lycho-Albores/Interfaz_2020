@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_empleado_ventanas.Estado_CuentaController">
+   <children>
+      <TableView fx:id="TablaEstadoCuenta" layoutX="66.0" layoutY="114.0" prefHeight="260.0" prefWidth="719.0" />
+      <Label layoutX="342.0" layoutY="14.0" text="Consulta de estados de cuenta">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label layoutX="121.0" layoutY="48.0" text="Numero de cuenta:">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label layoutX="121.0" layoutY="92.0" text="Saldo:">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label layoutX="513.0" layoutY="48.0" text="Tipo de cuenta:">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label layoutX="458.0" layoutY="92.0" text="Nombre cuenta-habiente:">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblNombreTitular" layoutX="611.0" layoutY="92.0" text="xxxxxxxxxxxxxxx">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblBumeroCuenta" layoutX="236.0" layoutY="48.0" text="xxxxxxxxxxxxxxx">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblTipoCuenta" layoutX="620.0" layoutY="48.0" text="xxxxxxxxxxxxxxxx">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblSaldo" layoutX="162.0" layoutY="92.0" text="xxxxxxxxxxxxxxx">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <JFXButton fx:id="btn_consultar" layoutX="365.0" layoutY="391.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: dcdcdc;" text="Consultar" />
+   </children>
+</AnchorPane>
